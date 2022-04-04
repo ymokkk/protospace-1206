@@ -7,10 +7,10 @@ class Prototype < ApplicationRecord
   has_many :comments, dependent: :destroy
 
   with_options presence: true do
-  validates :title
-  validates :detail
-  validates :point
-  validates :image
-  validates :category_id, numericality: { other_than: 1 } 
+    validates :title
+    validates :detail
+    validates :point
+    validates :image
+    validates :category_id
   end
 end
