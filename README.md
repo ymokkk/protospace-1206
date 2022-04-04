@@ -16,12 +16,13 @@
 
 ## prototypesテーブル
 
-| Column    | Type       | Options                        |
-| --------- | ---------- | ------------------------------ |
-| title     | string     | null: false                    |
-| detail    | text       | null: false                    |
-| point     | text       | null: false                    |
-| user      | references | null: false, foreign_key: true |
+| Column      | Type       | Options                        |
+| ----------- | ---------- | ------------------------------ |
+| title       | string     | null: false                    |
+| detail      | text       | null: false                    |
+| point       | text       | null: false                    |
+| category_id | integer    | null: false                    |
+| user        | references | null: false, foreign_key: true |
 
 ## Association
 -has_many :comments
