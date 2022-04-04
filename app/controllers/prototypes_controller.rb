@@ -44,10 +44,19 @@ class PrototypesController < ApplicationController
     redirect_to root_path
   end
 
+  def search
+    if params[:q]&.dig(:title)
+      squished_keywords = params[:q][:title].squish
+      params[:q][:title_cont_any] = squished_keywords.split(" ")
+    end
+    @q = Prototype.ransack(params[:q])
+    @prototypes = @q.result
+  end
+
   private
 
   def prototype_params
-    params.require(:prototype).permit(:title, :detail, :point, :image).merge(user_id: current_user.id)
+    params.require(:prototype).permit(:title, :detail, :point, :image, :category_id).merge(user_id: current_user.id)
   end
 
   def set_prototype

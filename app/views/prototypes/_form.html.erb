@@ -14,6 +14,11 @@
     <%= f.text_area :point, class: :form__text, id:"prototype_point" %>
   </div>
 
+  <tr>
+   <th class="detail-prototype">カテゴリー</th>
+    <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"genre-select"}) %>
+  </tr>
+
   <div class="field">
     <%= f.label :image, "画像" %><br />
     <%= f.file_field :image, id:"prototype_image" %>

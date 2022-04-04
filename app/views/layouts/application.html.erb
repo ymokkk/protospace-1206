@@ -22,6 +22,7 @@
             <div class="nav__right">
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
               <%= link_to "投稿する", new_prototype_path, class: :nav__btn %>
+              <%= link_to "商品検索", search_prototypes_path, class: :nav__btn %>
             </div>
             <% else %>
           <%# // ログインしているときは上記を表示するようにしましょう %>
