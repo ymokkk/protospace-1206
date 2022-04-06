@@ -62,13 +62,12 @@ a {
   color: #111;
   text-decoration: none;
   user-select: none;
-
   border-radius: 3px;
-  transition: 0.4s ease;
+    transition:.3s ease-out;
 }
 .nav__btn:hover{
-  color: #fff;
-  background: #111;
+  background:#666;
+  border-radius:20px; 
 }
 
 .nav__logout{
@@ -78,10 +77,11 @@ a {
   color: #111;
   text-decoration: none;
   user-select: none;
+  transition:.3s ease-out;
 }
 .nav__logout:hover{
-  color: #fff;
-  background: #111;
+  background:#666;
+  border-radius:20px; 
 }
 
 /* フォーム周り */
