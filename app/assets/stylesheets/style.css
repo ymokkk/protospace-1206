@@ -38,6 +38,8 @@ a {
 /* ヘッダー */
 
 .header {
+  background-image: url(whiteimage.jpg);
+  background-size: cover;
   background-color: #f2f2f2;
   margin-bottom: 48px;
   padding: 20px 0;
@@ -276,7 +278,7 @@ a {
 /* フッター */
 
 .footer {
-  background-color: #999;
+  background-color: #D3D3D3;
   padding: 10px 0;
 }
 .copyright {
