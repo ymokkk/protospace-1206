@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const previewImage = document.createElement('img');
     previewImage.setAttribute('class', 'preview-image');
     previewImage.setAttribute('src', blob);
-    //blobImage.classList.add('preview-size');
+    previewImage.classList.add('preview-size');
 
     previewWrapper.appendChild(previewImage);
     previewList.appendChild(previewWrapper);
