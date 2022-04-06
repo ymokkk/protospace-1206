@@ -62,13 +62,12 @@ a {
   color: #111;
   text-decoration: none;
   user-select: none;
-
   border-radius: 3px;
-  transition: 0.4s ease;
+    transition:.3s ease-out;
 }
 .nav__btn:hover{
-  color: #fff;
-  background: #111;
+  background:#666;
+  border-radius:20px; 
 }
 
 .nav__logout{
@@ -78,10 +77,11 @@ a {
   color: #111;
   text-decoration: none;
   user-select: none;
+  transition:.3s ease-out;
 }
 .nav__logout:hover{
-  color: #fff;
-  background: #111;
+  background:#666;
+  border-radius:20px; 
 }
 
 /* フォーム周り */
@@ -118,6 +118,11 @@ a {
 .form__btn:hover {
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
   cursor: pointer;
+}
+
+.preview-size {
+  height: 150px;
+  width: auto;
 }
 
 /* メイン */
