@@ -5,7 +5,7 @@ RSpec.describe User, type: :model do
     @user = FactoryBot.build(:user)
   end
 
-  describe "ユーザー新規登録" do
+  describe 'ユーザー新規登録' do
     context '新規登録できる場合' do
       it 'email、password、password_confirmation、name、profileが存在すれば登録できる' do
         expect(@user).to be_valid
@@ -18,15 +18,15 @@ RSpec.describe User, type: :model do
         expect(@user.errors.full_messages).to include("Email can't be blank")
       end
       it 'emialに@がないと登録できない' do
-        @user.email = "aaaa.com"
+        @user.email = 'aaaa.com'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Email is invalid")
+        expect(@user.errors.full_messages).to include('Email is invalid')
       end
       it '重複したemailが存在すると登録できない' do
         @user.save
         another_user = FactoryBot.build(:user, email: @user.email)
         another_user.valid?
-        expect(another_user.errors.full_messages).to include("Email has already been taken")
+        expect(another_user.errors.full_messages).to include('Email has already been taken')
       end
       it 'passwordが空では登録できない' do
         @user.password = ''
@@ -37,7 +37,7 @@ RSpec.describe User, type: :model do
         @user.password = '12345'
         @user.password_confirmation = '12345'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Password is too short (minimum is 6 characters)")
+        expect(@user.errors.full_messages).to include('Password is too short (minimum is 6 characters)')
       end
       it 'passwordとpassword_confirmationが不一致では登録できない' do
         @user.password = 'w6w6w6'
