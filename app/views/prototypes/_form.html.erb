@@ -1,17 +1,17 @@
 <%= form_with model: prototype, local: true do |f|%>
   <div class="field">
-    <%= f.label :title, "名称" %><br />
-    <%= f.text_field :title, id:"prototype_title" %>
+    <%= f.label :title, "商品名" %><br />
+    <%= f.text_field :title, id:"prototype_title", placeholder:"商品名" %>
   </div>
 
   <div class="field">
     <%= f.label :detail, "詳細" %><br />
-    <%= f.text_area :detail, class: :form__text, id:"prototype_detail" %>
+    <%= f.text_area :detail, class: :form__text, id:"prototype_detail", placeholder:"商品の特徴を記入" %>
   </div>
 
   <div class="field">
     <%= f.label :point, "ポイント" %><br />
-    <%= f.text_area :point, class: :form__text, id:"prototype_point" %>
+    <%= f.text_area :point, class: :form__text, id:"prototype_point", placeholder:"例) あのモデルも愛用!" %>
   </div>
 
   <tr>
