@@ -5,8 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   with_options presence: true do
-  validates :name
-  validates :profile
+    validates :name
+    validates :profile
   end
 
   has_many :prototypes

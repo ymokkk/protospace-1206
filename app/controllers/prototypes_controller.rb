@@ -1,5 +1,5 @@
 class PrototypesController < ApplicationController
-  before_action :authenticate_user!, except:[:index, :show]
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_prototype, only: [:show, :edit, :update]
 
   def index
@@ -15,8 +15,8 @@ class PrototypesController < ApplicationController
     if @prototype.save
       redirect_to root_path(@prototype)
     else
-     render :new
-   end
+      render :new
+    end
   end
 
   def show
@@ -25,9 +25,7 @@ class PrototypesController < ApplicationController
   end
 
   def edit
-    unless @prototype.user_id == current_user.id
-      redirect_to action: :index
-    end
+    redirect_to action: :index unless @prototype.user_id == current_user.id
   end
 
   def update
@@ -47,7 +45,7 @@ class PrototypesController < ApplicationController
   def search
     if params[:q]&.dig(:title)
       squished_keywords = params[:q][:title].squish
-      params[:q][:title_cont_any] = squished_keywords.split(" ")
+      params[:q][:title_cont_any] = squished_keywords.split(' ')
     end
     @q = Prototype.ransack(params[:q])
     @prototypes = @q.result

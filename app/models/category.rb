@@ -6,10 +6,9 @@ class Category < ActiveHash::Base
     { id: 4, name: 'メイクアップ' },
     { id: 5, name: '本' },
     { id: 6, name: 'バスグッズ' },
-    { id: 7, name: 'その他'}
+    { id: 7, name: 'その他' }
   ]
 
   include ActiveHash::Associations
   has_many :prototypes
-
 end
