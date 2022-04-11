@@ -1,4 +1,4 @@
-#class FavoritesController < ApplicationController
+class FavoritesController < ApplicationController
   #before_action :set_prototype, only: [:create, :destroy]
 
   #def create
@@ -21,4 +21,4 @@
   #def set_prototype
     #@prototype = Prototype.find(params[:prototype_id])
   #end
-#end
+end
