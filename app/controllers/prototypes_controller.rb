@@ -1,6 +1,6 @@
 class PrototypesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_prototype, only: [:show, :edit, :update]
+  #before_action :set_prototype, only: [:show, :edit, :update]
 
   def index
     @prototypes = Prototype.all
@@ -20,15 +20,19 @@ class PrototypesController < ApplicationController
   end
 
   def show
+    @prototype = Prototype.find(params[:id])
     @comment = Comment.new
     @comments = @prototype.comments.includes(:user)
+    #@favorite = Favorite.new
   end
 
   def edit
+    @prototype = Prototype.find(params[:id])
     redirect_to action: :index unless @prototype.user_id == current_user.id
   end
 
   def update
+    @prototype = Prototype.find(params[:id])
     if @prototype.update(prototype_params)
       redirect_to prototype_path
     else
@@ -44,7 +48,7 @@ class PrototypesController < ApplicationController
 
   def search
     if params[:q]&.dig(:title)
-      squished_keywords = params[:q][:title].squish
+     squished_keywords = params[:q][:title].squish
       params[:q][:title_cont_any] = squished_keywords.split(' ')
     end
     @q = Prototype.ransack(params[:q])
@@ -57,7 +61,7 @@ class PrototypesController < ApplicationController
     params.require(:prototype).permit(:title, :detail, :point, :image, :category_id).merge(user_id: current_user.id)
   end
 
-  def set_prototype
-    @prototype = Prototype.find(params[:id])
-  end
+  #def set_prototype
+    #@prototype = Prototype.find(params[:id])
+  #end
 end
