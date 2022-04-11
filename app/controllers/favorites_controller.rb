@@ -1,4 +1,4 @@
-class FavoritesController < ApplicationController
+#class FavoritesController < ApplicationController
   #before_action :set_prototype, only: [:create, :destroy]
 
   #def create
