@@ -3,6 +3,8 @@ class Prototype < ApplicationRecord
   belongs_to :category
 
   belongs_to :user
+  #has_many :favorites, dependent: :destroy
+  #has_many :favorited_users, through: :favorites, source: :user
   has_one_attached :image
   has_many :comments, dependent: :destroy
 

@@ -8,6 +8,9 @@ require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
 require('../preview')
+import "bootstrap"
+import "../stylesheets/application"
+
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -16,3 +19,5 @@ require('../preview')
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+//= require jquery
+//= require jquery_ujs

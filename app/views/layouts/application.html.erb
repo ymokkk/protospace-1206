@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <div style="background: url(topimage.jpg);">
+    <div style="background: url(whiteimage.jpg);">
     <title>Beauty sharing</title>
     </div>
     <%= csrf_meta_tags %>
@@ -10,7 +10,9 @@
     <link href="favicon.ico" rel="icon" >
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9536b042a8.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -18,7 +20,7 @@
       <div class="inner">
         <div class="nav">
           <div class="nav__left">
-            <%= link_to image_tag("beauty_share_03.png", class: :logo), root_path %>
+            <%= link_to image_tag("top_header_02.png", class: :logo), root_path %>
           </div>
           <% if user_signed_in? %>
             <div class="nav__right">

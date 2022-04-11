@@ -244,6 +244,11 @@ a {
   text-decoration: underline;
 }
 
+.fa-heart{
+  font-size: 20px;
+  color: red;
+}
+
 /* ユーザーページ */
 .user__wrapper{
   min-height: calc(100vh - 161px);
