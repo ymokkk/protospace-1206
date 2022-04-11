@@ -1,6 +1,4 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
@@ -11,4 +9,10 @@ class User < ApplicationRecord
 
   has_many :prototypes
   has_many :comments
+  #has_many :favorites, dependent: :destroy
+  #has_many :favorited_prototypes, through: :favorites, source: :prototype
+
+  #def already_favorited?(prototype)
+    #favorites.exists?(prototype_id: prototype.id)
+  #end
 end
