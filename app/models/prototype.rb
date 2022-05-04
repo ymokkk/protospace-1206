@@ -7,6 +7,7 @@ class Prototype < ApplicationRecord
   #has_many :favorited_users, through: :favorites, source: :user
   has_one_attached :image
   has_many :comments, dependent: :destroy
+  has_many :likes
 
   with_options presence: true do
     validates :title

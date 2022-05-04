@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <div style="background: url(whiteimage.jpg);">
     <title>Beauty sharing</title>
     </div>
     <%= csrf_meta_tags %>
@@ -24,7 +23,7 @@
       <div class="inner">
         <div class="nav">
           <div class="nav__left">
-            <%= link_to image_tag("top_header_02.png", class: :logo), root_path %>
+            <%= link_to image_tag("topimage.jpg", class: :logo), root_path %>
           </div>
           <% if user_signed_in? %>
             <div class="nav__right">

@@ -14,17 +14,8 @@
       <div class="prototype__image">
         <%= image_tag @prototype.image %>
       </div>
-      <div style="text-align:center">
-      <%#<% if current_user.already_favorited?(@prototype) %>
-        <%#<%= link_to  prototype_favorites_path(@prototype), method: :delete do %>
-          <%#<i class="fas fa-heart" ></i>
-        <%#<% end %>
-      <%#<% else %>
-        <%#<%= link_to prototype_favorites_path(@prototype), method: :post do %>
-          <i class="far fa-heart"></i>
-        <%#<% end %>
-      <%#<% end %>
-      <%#<%= @prototype.favorited_users.count %>
+      <div id="like_button_<%= @prototype.id %>">
+      <%= render 'likes/like', prototype: @prototype %>
       </div>
       <div class="prototype__body">
         <div class="prototype__detail">
